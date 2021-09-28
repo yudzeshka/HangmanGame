@@ -1,1 +1,101 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/musicPlayer.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <title>Hangman</title>
+  </head>
+  <body>
+    <h1>Hangman</h1>
+    <p>Which country is this flag. Enter the name.</p>
+    <div class="flag" id="flag"></div>
+    <div class="game-container">
+      <!-- Rod -->
+      <svg height="250" width="200" class="figure-container">
+        <line x1="60" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="50" />
+        <line x1="60" y1="20" x2="60" y2="230" />
+        <line x1="20" y1="230" x2="100" y2="230" />
+
+        <!-- Rod -->
+        <circle cx="140" cy="70" r="20" class="figure-part" />
+
+        <!-- Body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+
+        <!-- Arms -->
+        <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+        <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+
+        <!-- Legs -->
+        <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+        <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+      </svg>
+
+      <div class="wrong-letters-container">
+        <div id="wrong-letters"></div>
+      </div>
+      <div class="word" id="word"></div>
+    </div>
+    <!--Container for final message-->
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <h2 id="final-message"></h2>
+        <button id="play-button">Play Again</button>
+      </div>
+    </div>
+
+    <!--Notification-->
+    <div class="notification-container" id="notification-container">
+      <p>You have alredy enteged this letter</p>
+    </div>
+
+    <!--Music player-->
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h4 id="title"></h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <audio src="./music/Ed Sheeran – Bad Habits.mp3" id="audio"></audio>
+      <div class="image-container">
+        <img
+          src="./images/Ed Sheeran – Bad Habits.jpg"
+          alt="music-cover"
+          id="cover"
+        />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+
+        <button id="volume-btn" class="action-btn">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <div class="volume-container" id="volume_container">
+          <div class="volume" id="volume"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="musicPlayer.js"></script>
+  </body>
+</html>
