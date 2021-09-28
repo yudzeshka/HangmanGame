@@ -168,3 +168,6 @@ p {
     padding-top: 10px;
   }
 }
+
+@media (max-height: 999px) {
+}
