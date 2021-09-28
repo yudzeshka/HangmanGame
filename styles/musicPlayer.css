@@ -133,7 +133,7 @@ body {
   border-radius: 5px;
   height: 100%;
   width: 0%;
-  transition: width 0.1s linear;
+  transition: width 0.2s linear;
 }
 
 .volume-container {
@@ -160,16 +160,5 @@ body {
   .music-container {
     padding: 15px 30px;
     margin: 40px 0 70px 0;
-  }
-}
-
-@media (max-height: 900px) {
-  body {
-    position: relative;
-  }
-  .music-container {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
   }
 }
