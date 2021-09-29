@@ -10,8 +10,8 @@ const figureParts = document.querySelectorAll(".figure-part");
 const flagImg = document.createElement("img");
 flagEl.append(flagImg);
 
-let correctLetters = [];
-let wrongLetters = [];
+const correctLetters = [];
+const wrongLetters = [];
 
 //Show flag
 function showFlag() {
@@ -119,9 +119,7 @@ playAgainBtn.addEventListener("click", () => {
     window.removeEventListener("keydown", listener);
     //Empty arrays
     correctLetters.splice(0);
-    // wrongLetters.splice(0);
-    wrongLetters = []
-    correctLetters = []
+    wrongLetters.splice(0);
     displayWord();
     updateWrongLettersEl();
     message.style.display = "none";

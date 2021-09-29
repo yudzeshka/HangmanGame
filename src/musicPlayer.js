@@ -2,11 +2,9 @@ const musicContainer = document.getElementById("music-container");
 const playBtn = document.getElementById("play");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-
 const audio = document.getElementById("audio");
 const progress = document.getElementById("progress");
 const progressContainer = document.getElementById("progress-container");
-
 const title = document.getElementById("title");
 const cover = document.getElementById("cover");
 const volumeSizeContainer = document.getElementById("volume_container");
@@ -122,13 +120,9 @@ function setVolumeValue(event) {
   if (!audio.volume) {
     return;
   }
-
   const height = this.clientHeight;
-
   const clickPosY = event.offsetY;
-
   audio.volume = clickPosY / height;
-
   updateVolumeSize();
 }
 
@@ -139,7 +133,6 @@ function updateVolumeSize() {
 
   const volumeValue = audio.volume;
   const volumePrecents = volumeValue * 100;
-
   volumeSize.style.height = `${volumePrecents}%`;
 }
 
@@ -147,12 +140,10 @@ function offSounds() {
   if (audio.volume) {
     volumeBtn.querySelector("i.fas").classList.remove("fa-volume-up");
     volumeBtn.querySelector("i.fas").classList.add("fa-volume-mute");
-
     audio.volume = 0;
   } else {
     volumeBtn.querySelector("i.fas").classList.remove("fa-volume-mute");
     volumeBtn.querySelector("i.fas").classList.add("fa-volume-up");
-
     audio.volume = 1;
   }
 }
